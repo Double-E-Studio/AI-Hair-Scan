@@ -53,9 +53,12 @@
                     <li><strong>Email address</strong> (if provided through Google or Apple Sign-In)</li>
                     <li><strong>Terms acceptance status</strong> (confirmation and timestamp)</li>
                     <li><strong>Credit/coin balance</strong> for internal reward and unlock mechanics</li>
-                    <li><strong>Scan history metadata</strong> (date, time, textual analysis results - NOT photos)</li>
-                    <li><strong>Hair care products logged by the user</strong> (name, description, category - user-provided content)</li>
+                    <li><strong>Scan timestamps</strong> (date and time only — NOT photos or analysis results)</li>
                 </ul>
+
+                <div class="notice-box info">
+                    <strong>Local Storage Only:</strong> Scan history (including analysis results), hair-care product logs, and onboarding preferences are stored <strong>only on your device</strong> using local storage. They are never uploaded to our servers.
+                </div>
 
                 <div class="notice-box success">
                     <strong>Important:</strong> Scalp <strong>photos</strong> are NOT permanently stored on our servers. Images are processed temporarily and sent to Google Gemini API to generate results, then removed from temporary processing memory.
@@ -104,7 +107,7 @@
                             <td>Explicit consent (Art. 6(1)(a) and Art. 9(2)(a) GDPR - potential health-related data)</td>
                         </tr>
                         <tr>
-                            <td>Scan history and product logs</td>
+                            <td>Scan timestamps</td>
                             <td>Performance of a contract (Art. 6(1)(b) GDPR)</td>
                         </tr>
                         <tr>
@@ -165,7 +168,7 @@
 
                 <h3>5.4 Supabase</h3>
                 <p><strong>Purpose:</strong> Backend database and authentication infrastructure. Supabase stores and manages all persistent user data associated with the Application.<br>
-                <strong>Data stored:</strong> User identifiers, email addresses, Terms acceptance records, coin/credit balances, scan history metadata (text only, no photos), and hair-care product logs.<br>
+                <strong>Data stored:</strong> User identifiers, email addresses, Terms acceptance records, coin/credit balances, and scan timestamps (date/time only — no photos, no analysis results, no product logs).<br>
                 <strong>Legal basis:</strong> Performance of a contract (Art. 6(1)(b) GDPR) and, where applicable, legal obligation.<br>
                 <strong>Location:</strong> Data may be processed in the United States or other regions where Supabase infrastructure operates. Supabase provides GDPR-compliant data processing agreements for eligible customers.<br>
                 <strong>Policy:</strong> <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">Supabase Privacy Policy</a></p>
@@ -178,11 +181,15 @@
                 <p>Personal data is retained as follows:</p>
                 <ul>
                     <li><strong>Account data:</strong> until account deletion by the user</li>
-                    <li><strong>Scan history metadata:</strong> until account deletion or specific erasure request</li>
+                    <li><strong>Scan timestamps:</strong> until account deletion</li>
                     <li><strong>Photos:</strong> temporary processing only, then removed (not permanently stored)</li>
-                    <li><strong>Terms acceptance data:</strong> retained as needed to demonstrate consent/acceptance and legal compliance</li>
+                    <li><strong>Terms acceptance logs:</strong> retained for up to 10 years after account deletion for legal defense purposes, as permitted under GDPR Art. 17(3)(e) (establishing, exercising, or defending legal claims). Only minimal data is retained: timestamp, version accepted, and anonymized user reference.</li>
                     <li><strong>Technical logs:</strong> retained for a limited period for security and troubleshooting</li>
                 </ul>
+
+                <div class="notice-box info">
+                    <strong>Post-Deletion Retention:</strong> After account deletion, we retain only a minimal log of your Terms acceptance (timestamp and version) for legal compliance purposes. This data cannot identify you personally and is retained solely to demonstrate that you accepted our Terms at the time of use.
+                </div>
 
                 <h2>7. User Rights</h2>
                 <p>Under GDPR, users may have the right to:</p>

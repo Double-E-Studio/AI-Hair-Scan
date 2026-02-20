@@ -120,10 +120,10 @@
                     <div class="faq-answer">
                         Each scan report includes:
                         <ul style="margin: 10px 0 0 1.2rem;">
-                            <li><strong>Hair Density</strong> — Sparse / Normal / Dense</li>
-                            <li><strong>Norwood Scale</strong> — Stage I through VII hair loss classification</li>
-                            <li><strong>Volume</strong> — Low / Moderate / Full</li>
-                            <li><strong>Scalp Condition</strong> — Dry / Balanced / Oily</li>
+                            <li><strong>Hair Density</strong> — Percentage score (0-100%) indicating scalp coverage</li>
+                            <li><strong>Norwood Scale</strong> — Stage 1 through 7 hair loss classification</li>
+                            <li><strong>Volume</strong> — Percentage score (0-100%) measuring hair fullness</li>
+                            <li><strong>Overall Condition</strong> — Percentage score (0-100%) combining quality and coverage</li>
                             <li><strong>Overall Review</strong> — AI-generated narrative with observations and suggestions</li>
                         </ul>
                     </div>
@@ -160,7 +160,7 @@
                         <span class="icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        Yes, if you are signed in with a Google or Apple account. Your scan history — including results and dates — is saved to your profile and accessible from the home area of the app. Guest users do not have persistent scan history.
+                        Yes. Your scan history — including results and dates — is saved locally on your device and accessible from the home area of the app. All scan data remains on your device only, regardless of whether you're signed in or using the app as a guest.
                     </div>
                 </div>
 
@@ -170,7 +170,7 @@
                         <span class="icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        The Hair Product Log lets you record the shampoos, conditioners, oils, or treatments you use. You can add product names, descriptions, and categories to keep a personal log of what you're trying. This data is stored in your account (if signed in).
+                        The Hair Product Log lets you record the shampoos, conditioners, oils, or treatments you use. You can add product names, descriptions, and categories to keep a personal log of what you're trying. All product log data is stored locally on your device.
                     </div>
                 </div>
 
@@ -197,7 +197,7 @@
                         <span class="icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <strong>No.</strong> Scalp photos captured through Hair Scan AI are never permanently stored on our servers. They are encoded and sent temporarily to Google Gemini API for analysis, then discarded. Only the <em>textual result</em> of the analysis is saved — never the photos themselves.
+                        <strong>No.</strong> Scalp photos captured through Hair Scan AI are never stored on our servers. They are encoded and sent temporarily to Google Gemini API for analysis, then immediately discarded. The scan results are stored only on your device — nothing is saved on our servers.
                     </div>
                 </div>
 
@@ -222,7 +222,7 @@
                             <li>Your user ID and email (from Google or Apple)</li>
                             <li>Terms acceptance status and timestamp</li>
                             <li>Your coin/credit balance</li>
-                            <li>Scan history metadata (dates and text results — no photos)</li>
+                            <li>Scan dates (timestamps only — no photos or results)</li>
                             <li>Hair product logs you create manually</li>
                         </ul>
                         We use <strong>Supabase</strong> as our secure backend provider.
@@ -269,7 +269,7 @@
                         <span class="icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        Yes. You can run scans as a <strong>guest</strong> without creating any account. In guest mode, scan history is not saved to a profile. To access saved history, product logs, and coin balance across sessions, you need to sign in with Google or Apple.
+                        Yes. You can run scans as a <strong>guest</strong> without creating any account. Scan history, product logs, and results are always stored locally on your device, regardless of whether you're signed in. The only difference when you sign in with Google or Apple is that your coin balance is synced to your account, so you'll find your coins if you log in from another device.
                     </div>
                 </div>
 
@@ -279,7 +279,7 @@
                         <span class="icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        You can delete your account at any time directly from the <strong>Settings</strong> screen inside the app. Account deletion permanently removes all associated data — scan history, product logs, coin balance, and consent records — through a cascade delete. This action cannot be undone.
+                        You can delete your account at any time directly from the <strong>Settings</strong> screen inside the app. Account deletion permanently removes your user ID, email, and coin balance from our servers. Your scan history and product logs remain stored locally on your device until you uninstall the app or manually clear them. For legal defense purposes, we retain a minimal log of your terms acceptance (timestamp and version only) for up to 10 years, as permitted under GDPR Art. 17(3)(e).
                     </div>
                 </div>
 
